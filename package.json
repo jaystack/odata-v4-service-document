@@ -1,0 +1,43 @@
+{
+  "name": "odata-v4-service-document",
+  "version": "0.0.1",
+  "description": "OData service document",
+  "main": "lib/serviceDocument.js",
+  "bugs": {
+    "url": "https://github.com/jaystack/odata-v4-service-document/issues"
+  },
+  "homepage": "https://github.com/jaystack/odata-v4-service-document#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaystack/odata-v4-service-document.git"
+  },
+  "keywords": [
+    "OData",
+    "V4",
+    "service",
+    "metadata",
+    "document",
+    "XML"
+  ],
+  "typings": "lib/serviceDocument.d.ts",
+  "author": "JayStack",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {
+    "extend": "^3.0.0",
+    "odata-v4-metadata": "^0.1.2",
+    "odata-v4-service-metadata": "^0.1.4"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.4.5",
+    "typescript": "^1.8.9"
+  },
+  "scripts": {
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "mocha tests"
+  }
+}
