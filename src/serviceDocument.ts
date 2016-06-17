@@ -27,7 +27,9 @@ export class ServiceDocument extends ServiceMetadata {
             
             var data = this.document(format)
             if (!data['@odata.context']) {
-                data['@odata.context'] = req.protocol + '://' + req.get('host') + req.originalUrl.split("?").shift() + '/$metadata';
+                var url = req.protocol + '://' + req.get('host') + req.originalUrl.split("?").shift();
+                if(url.slice(-1) !== '/') url += '/'
+                data['@odata.context'] = url + '$metadata';
             }
             
             res.json(data);

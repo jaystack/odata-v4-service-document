@@ -1,6 +1,6 @@
 {
   "name": "odata-v4-service-document",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "OData service document",
   "main": "lib/serviceDocument.js",
   "bugs": {
