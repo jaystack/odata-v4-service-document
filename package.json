@@ -1,6 +1,6 @@
 {
   "name": "odata-v4-service-document",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "OData service document",
   "main": "lib/serviceDocument.js",
   "bugs": {
@@ -28,16 +28,20 @@
   "dependencies": {
     "extend": "^3.0.0",
     "odata-v4-metadata": "^0.1.2",
-    "odata-v4-service-metadata": "^0.1.4"
+    "odata-v4-service-metadata": "^0.1.4",
+    "rimraf": "^2.6.1"
   },
   "devDependencies": {
+    "@types/express": "^4.0.36",
     "chai": "^3.4.1",
     "mocha": "^2.4.5",
-    "typescript": "^1.8.9"
+    "typescript": "^2.5.1"
   },
   "scripts": {
+    "prebuild": "rimraf lib",
     "build": "tsc",
     "pretest": "npm run build",
-    "test": "mocha tests"
+    "test": "mocha tests",
+    "prepublish": "npm run build"
   }
 }
