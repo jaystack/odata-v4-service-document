@@ -47,4 +47,6 @@ var serviceDocument = ServiceDocument.processMetadataJson(schema);
 var serviceDocumentJson = serviceDocument.document();
 ```
 
+
 An example schema JSON looks like [this](https://raw.githubusercontent.com/jaystack/odata-v4-service-document/master/tests/schema2.json)
+
